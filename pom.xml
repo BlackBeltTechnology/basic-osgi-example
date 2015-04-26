@@ -8,7 +8,9 @@
     <version>1.0.0-SNAPSHOT</version>
     <name>hu.blackbelt.reactor</name>
     <modules>
-        <module>felix-runtime</module>
         <module>hu.blackbelt.base</module>
+        <module>hu.blackbelt.logger</module>
+        <module>hu.blackbelt.httpwhiteboard.example</module>
+        <module>felix-runtime</module>
     </modules>
 </project>

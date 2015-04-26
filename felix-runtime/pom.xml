@@ -127,7 +127,18 @@
                                 </artifactItem>
 
                                 <!-- custom dependencies (bundles) -->
-
+                                <artifactItem>
+                                    <groupId>hu.blackbelt</groupId>
+                                    <artifactId>hu.blackbelt.httpwhiteboard.example</artifactId>
+                                    <version>1.0.0-SNAPSHOT</version>
+                                    <type>jar</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>hu.blackbelt</groupId>
+                                    <artifactId>hu.blackbelt.logger</artifactId>
+                                    <version>1.0.0-SNAPSHOT</version>
+                                    <type>jar</type>
+                                </artifactItem>
 								
                             </artifactItems>
                             <outputDirectory>target/felix-framework-4.6.1/bundle</outputDirectory>

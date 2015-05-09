@@ -1,7 +1,7 @@
 package hu.blackbelt.logger.api;
 
 
-public interface LoggerService {
+public interface CustomLoggerService {
 
     void info(String message);
 

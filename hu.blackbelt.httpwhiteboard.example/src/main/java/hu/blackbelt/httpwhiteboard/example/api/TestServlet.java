@@ -1,6 +1,6 @@
 package hu.blackbelt.httpwhiteboard.example.api;
 
-import hu.blackbelt.logger.api.LoggerService;
+import hu.blackbelt.logger.api.CustomLoggerService;
 import org.apache.felix.scr.annotations.*;
 
 import javax.servlet.Servlet;
@@ -24,14 +24,12 @@ import static org.apache.felix.scr.annotations.ReferenceCardinality.OPTIONAL_UNA
 })
 public class TestServlet extends HttpServlet {
 
-    @Reference(cardinality = OPTIONAL_UNARY)
-    private LoggerService loggerService;
+    @Reference(cardinality = MANDATORY_UNARY)
+    private CustomLoggerService customLoggerService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if(loggerService != null) {
-            loggerService.info("Printing Hello world.");
-        }
+        customLoggerService.info("Printing Hello world.");
 
         PrintWriter out = resp.getWriter();
         out.println("Hello world.");
